@@ -13,13 +13,14 @@ button.addEventListener('click', event => {
     'If a wood chuck could chuck wood, would the wood chuck chuck wood? please enter y or n',
     'If I had a dollar for every semi-colon I forgot could I buy a porche? please enter y or n'
   ];
-  let answersArray = ['y', 'n', 'n', 'y', 'y'];
+  let answersCharArray = ['y', 'n', 'n', 'y', 'y'];
+  let answersWordArray = ['yes', 'no', 'no', 'yes', 'yes'];
   let setResponseArray = arr => {
     questionsArray.forEach((el, index) => {
       let userAnswer = prompt(el).toLowerCase();
-      console.log('answer array: ', answersArray[index]);
+      console.log('answer array: ', answersCharArray[index]);
       console.log('user answer: ', userAnswer);
-      if (userAnswer === answersArray[index]) {
+      if (userAnswer === answersCharArray[index] || userAnswer === answersWordArray[index]) {
         alert(
           'My dawg! ' + visitorsName + ' you know me better than I know myself.'
         );
