@@ -16,7 +16,7 @@ button.addEventListener('click', event => {
   let answersCharArray = ['y', 'n', 'n', 'y', 'y'];
   let answersWordArray = ['yes', 'no', 'no', 'yes', 'yes'];
   let setResponseArray = arr => {
-    questionsArray.forEach((el, index) => {
+    arr.forEach((el, index) => {
       let userAnswer = prompt(el).toLowerCase();
       console.log('answer array: ', answersCharArray[index]);
       console.log('user answer: ', userAnswer);
