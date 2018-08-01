@@ -9,6 +9,7 @@ body {
 #header-img {
     text-align: center;
 }
+
 .centered {
     text-align: center;
 }
@@ -34,12 +35,12 @@ body {
 form {
     padding: 100px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 fieldset {
     border-radius: 10px;
-    border:2px groove goldenrod;
+    border: 2px groove goldenrod;
     width: 70%;
 }
 
@@ -63,7 +64,7 @@ button {
 }
 
 #buttondiv {
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
