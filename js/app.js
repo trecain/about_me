@@ -7,11 +7,11 @@ const button = document.getElementById('myBtn');
 button.addEventListener('click', event => {
   event.preventDefault();
   let questionsArray = [
-    'Do I like sippin coronas on a hot summer night? please enter y or n',
-    'When playing video games do I cheat? please enter y or n',
-    'Do I even know how to turn my computer on? please enter y or n',
-    'If a wood chuck could chuck wood, would the wood chuck chuck wood? please enter y or n',
-    'If I had a dollar for every semi-colon I forgot could I buy a porche? please enter y or n'
+    'Do I like sippin coronas on a hot summer night?',
+    'When playing video games do I cheat?',
+    'Do I even know how to turn my computer on?',
+    'If a wood chuck could chuck wood, would the wood chuck chuck wood?',
+    'If I had a dollar for every semi-colon I forgot could I buy a porche?'
   ];
   let answersCharArray = ['y', 'n', 'n', 'y', 'y'];
   let answersWordArray = ['yes', 'no', 'no', 'yes', 'yes'];
