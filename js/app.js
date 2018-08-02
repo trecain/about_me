@@ -1,35 +1,34 @@
 'use strict';
 //prompt user for name
-let visitorsName = prompt(
+var visitorsName = prompt(
   'Hello, welcome to my site. If you don\'t mind could I please get your name?'
 );
 console.log('visitor name: ', visitorsName);
 
 //adding even handler
-const button = document.getElementById('myBtn');
+var button = document.getElementById('myBtn');
 button.addEventListener('click', event => {
   event.preventDefault();
 
   //initial variables
-  let questionsArray = [
+  var questionsArray = [
     'Question 1: Do I like sippin coronas on a hot summer night?',
     'Question 2: When playing video games do I cheat?',
     'Question 3: Do I even know how to turn my computer on?',
     'Question 4: If a wood chuck could chuck wood, would the wood chuck chuck wood?',
     'Question 5: If I had a dollar for every semi-colon I forgot could I buy a porche?'
   ];
-  let answersCharArray = ['y', 'n', 'n', 'y', 'y'];
-  let answersWordArray = ['yes', 'no', 'no', 'yes', 'yes'];
-  let numberOfCorrectAnswers = 0;
+  var answersCharArray = ['y', 'n', 'n', 'y', 'y'];
+  var answersWordArray = ['yes', 'no', 'no', 'yes', 'yes'];
+  var numberOfCorrectAnswers = 0;
   console.log('correct number of guesses: ', numberOfCorrectAnswers);
 
   //setting variables and asking first five questions
-  let setResponseArray = arr => {
+  var setResponseArray = arr => {
     arr.forEach((el, index) => {
-      let userAnswer = prompt(el).toLowerCase();
+      var userAnswer = prompt(el).toLowerCase();
       console.log(userAnswer);
-      console.log(typeof userAnswer);
-      let validatingArray = answersCharArray + answersWordArray;
+      var validatingArray = answersCharArray + answersWordArray;
 
       while (
         validatingArray.includes(userAnswer) === false ||
@@ -57,10 +56,10 @@ button.addEventListener('click', event => {
   };
 
   //asking number question to user
-  let numberQuestion = () => {
-    let count = 1;
+  var numberQuestion = () => {
+    var count = 1;
     while (count < 5) {
-      let numberToGuess = parseInt(
+      var numberToGuess = Number(
         prompt(
           'Question 6: How many sons do I have? you have five chances to get it correct.'
         )
@@ -84,11 +83,11 @@ button.addEventListener('click', event => {
   };
 
   //asking question with multiple answers to user
-  let multipleQuestion = () => {
-    let multiArray = ['new york', 'california', 'texas'];
-    let count = 1;
+  var multipleQuestion = () => {
+    var multiArray = ['new york', 'california', 'texas'];
+    var count = 1;
     while (count < 7) {
-      let userMultiAnwser = prompt(
+      var userMultiAnwser = prompt(
         'Ouestion 7: Try to guess one of my favorite states i\'ve visited, you have seven chances to get it correct.'
       ).toLowerCase();
       if (!isNaN(userMultiAnwser)) {
@@ -123,7 +122,7 @@ button.addEventListener('click', event => {
   };
 
   //displaying the number of correct answer to the user
-  const printNumberOfCorrectAnswers = () => {
+  var printNumberOfCorrectAnswers = () => {
     console.log('correct number of guesses: ', numberOfCorrectAnswers);
     alert(
       visitorsName + ' you scored ' + numberOfCorrectAnswers + ' out of 7 yo!'
@@ -131,7 +130,7 @@ button.addEventListener('click', event => {
   };
 
   //invoking functions
-  const main = () => {
+  var main = () => {
     setResponseArray(questionsArray);
     numberQuestion();
     multipleQuestion();
