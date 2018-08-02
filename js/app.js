@@ -42,7 +42,7 @@ button.addEventListener('click', event => {
       }
       console.log('answer array: ', answersCharArray[index]);
       console.log('user answer: ', userAnswer);
-      if (validatingArray.includes(userAnswer) === true) {
+      if (userAnswer === answersCharArray[index] || userAnswer === answersWordArray[index]) {
         alert(
           'My dawg! ' + visitorsName + ' you know me better than I know myself.'
         );
