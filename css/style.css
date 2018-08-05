@@ -1,5 +1,5 @@
 body {
-    background-image: url("/Users/earnestcain/Desktop/codefellows/201/about_me/img/battlearena.png");
+    background-image: url("../img/battlearena.png");
     height: 100vh;
     padding-top: 10vh;
 }
