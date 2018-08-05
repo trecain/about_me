@@ -61,17 +61,17 @@ button.addEventListener('click', event => {
     while (count < 5) {
       var numberToGuess = Number(
         prompt(
-          'Question 6: How many sons do I have? you have five chances to get it correct.'
+          'Question 6: What is my favorite number?'
         )
       );
       if (isNaN(numberToGuess)) {
         alert('That is not a number. You lose a turn');
-      } else if (numberToGuess === 2) {
+      } else if (numberToGuess === 7) {
         alert('Yes, ' + visitorsName + ' you got it right!');
         return;
-      } else if (numberToGuess > 2) {
+      } else if (numberToGuess > 7) {
         alert('You guessed to high.');
-      } else if (numberToGuess < 2) {
+      } else if (numberToGuess < 7) {
         alert('You guessed to low.');
       } else {
         alert('That is incorrect, please try again');
