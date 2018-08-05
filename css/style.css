@@ -1,83 +1,101 @@
 body {
-    background-color: black;
-    color: goldenrod;
-    border: 5px solid goldenrod;
+    background-image: url("/Users/earnestcain/Desktop/codefellows/201/about_me/img/battlearena.png");
+    height: 100vh;
+    padding-top: 10vh;
+}
+
+.flip-container {
+    perspective: 1000;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 445px;
+    margin: 0 auto;
+}
+
+.flipper {
+    transition: 2.52s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #00a;
+    box-shadow: 0 0 10px #000;
     border-radius: 5px;
-    font-family: fantasy;
 }
 
-#header-img {
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-color: #f7e370;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #333;
+    color: #ccc;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper,
+.flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+.title {
     text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    font-size: 22px;
 }
 
-.centered {
-    text-align: center;
-}
-
-.inputfields {
-    border: 2px solid black;
-    padding: 20px;
-    text-align: justify;
-    border-radius: 10px;
-}
-
-.landing-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 5px groove goldenrod
-}
-
-#main {
-    font-size: 70px;
-}
-
-form {
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-fieldset {
-    border-radius: 10px;
-    border: 2px groove goldenrod;
-    width: 70%;
-}
-
-legend {
-    color: white;
-    font-size: 40px;
-}
-
-input {
-    margin-left: 10px;
-}
-
-button {
-    background-color: black;
-    color: white;
-    border: 2px solid goldenrod;
-    padding: 10px;
-    width: 20%;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-#buttondiv {
-    display: flex;
-    justify-content: center;
-}
-
-.btn-div {
-    display: flex;
-    align-items: center;
-}
-
-.info h2 {
-    color: white;
+img {
+    object-fit: contain;
+    border-radius: 5px;
 }
 
 #btn-div {
     text-align: center;
+    color: #f86735;
+    font-size: 35px;
+}
+
+#btn-div h2 {
+    margin: 20px;
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: rgba(25, 25, 25, 0);
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.warning {
+    border-color: #ff9800;
+    color: black;
+}
+
+.warning:hover {
+    background: #ff9800;
     color: white;
 }
+
+/* Used some coding snippets from Cody Hadsall -- https://codepen.io/ccidesign/pen/Yydjxr */
