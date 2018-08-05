@@ -129,7 +129,7 @@ button.addEventListener('click', event => {
     );
   };
 
-  //invoking functions
+  //invoking all functions
   var main = () => {
     setResponseArray(questionsArray);
     numberQuestion();
